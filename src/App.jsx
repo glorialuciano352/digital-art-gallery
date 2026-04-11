@@ -183,7 +183,7 @@ function App() {
                     Artist: <span style={{
                       color: '#ffffff',
                       fontWeight: 'bold',
-                      textShadow: '0 0 5px #39FF14, 0 0 10px #ffffff, 0 0 15px #39FF14'
+                      textShadow: '0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #ffffff'
                     }}>
                       {item.artist}
                     </span>
