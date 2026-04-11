@@ -25,6 +25,7 @@ const About = ({ setShowAbout }) => {
             This is original work by me, <span className="glow-name">GLO</span>. 
             What you see here is a curated presentation—each piece shown in a restrained format to preserve the depth and detail of the full work. 
             These early pieces, created during my Digital Painting studies, mark the beginning of my artistic direction.
+            For full works, submit an inquiry.
           </p>
 
           <h2 style={{ color: '#39FF14', marginTop: '40px' }}>Evolution of Style</h2>
