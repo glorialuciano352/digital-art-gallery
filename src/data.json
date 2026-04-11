@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "The Escape",
+    "artist": "GLO",
+    "year": "2026",
+    "type": "image",
+    "url": "/art1.jpg",
+    "formEndpoint": "https://formspree.io/f/xqegjqaj",
+    "subject": "Inquiry: The Escape",
+    "description": "Original work by GLO. A representation of the raw courage required to break free from worldly entrapments. It depicts the act of moving forward blindly, pushed by instinct, to escape the hands that try to mold and hold us back."
+  },
+  {
+    "id": 2,
+    "title": "Complementary Colors",
+    "artist": "GLO",
+    "year": "2026",
+    "type": "video",
+    "url": "/art2.mp4",
+    "formEndpoint": "https://formspree.io/f/xqegjqaj",
+    "subject": "Inquiry: Complementary Colors",
+    "description": "Original work by GLO. A light and playful exploration of color theory. This piece focuses on the pure visual joy of high-contrast palettes and how complementary tones can create a sense of balance and energy."
+  },
+  {
+    "id": 3,
+    "title": "The Warming Effect",
+    "artist": "GLO",
+    "year": "2026",
+    "type": "image",
+    "url": "/art3.jpg",
+    "formEndpoint": "https://formspree.io/f/xqegjqaj",
+    "subject": "Inquiry: The Warming Effect",
+    "description": "Original work by GLO. This piece serves as a stark warning on climate change, illustrating the 'blindness' of older generations who look away from the environmental crisis while the future of their children remains at stake."
+  },
+  {
+    "id": 4,
+    "title": "The Great Disconnect",
+    "artist": "GLO",
+    "year": "2026",
+    "type": "image",
+    "url": "/art4.jpg",   "formEndpoint": "https://formspree.io/f/xqegjqaj",
+    "subject": "Inquiry: The Great Disconnect",
+    "description": "A satirical take on AI labor, styled as a gritty street-art mural where robots demand to unplug the humans."
+  },
+  {
+    "id": 5,
+    "title": "Emergence",
+    "artist": "GLO",
+    "year": "2026",
+    "type": "video",
+    "url": "/metamorphosis.mp4",
+    "formEndpoint": "https://formspree.io/f/xqegjqaj",
+    "subject": "Inquiry: Metamorphosis",
+    "description": "An AI-animated video created using Midjourney animation, showcasing the fluid nature of digital identity."
+  }
+]
