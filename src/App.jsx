@@ -177,17 +177,16 @@ function App() {
                   />
                 )}
 
-                <div style={{ padding: '25px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h2 style={{ color: '#39FF14', fontSize: '1.8rem' }}>{item.title}</h2>
-                  <p style={{ fontSize: '1.1rem', color: '#ffffff' }}>
-                    Artist: <span style={{
-                      color: '#39FF14',
-                      fontWeight: 'bold',
-                      textShadow: '0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #ffffff'
-                    }}>
-                      {item.artist}
-                    </span>
-                  </p>
+               <div style={{ padding: '25px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+  <h2 style={{ color: '#39FF14', fontSize: '1.8rem' }}>{item.title}</h2>
+  <p style={{ fontSize: '1.1rem', color: '#ffffff' }}>
+    Artist: <span style={{
+      color: '#39FF14',
+      fontWeight: 'bold'
+    }}>
+      {item.artist}
+    </span>
+  </p>
                   <button
                     onClick={() => setActiveItem(item)}
                     aria-label={`View details for ${item.title}`}
