@@ -36,32 +36,30 @@ function App() {
     item => filter === 'all' || item.type === filter
   );
 
+  const galleryStyles = `
+    * { box-sizing: border-box; }
+    html { font-size: 16px; }
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 20px 10px;
+      margin-bottom: 40px;
+    }
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 100px;
+    }
+  `;
+
   return (
     <main style={appStyle}>
-      <style>{`
-        /* Normalize sizing across browsers */
-        * { box-sizing: border-box; }
-        html { font-size: 16px; } 
+      <style>{galleryStyles}</style>
 
-        .filter-container {
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          padding: 20px 10px;
-          margin-bottom: 40px;
-        }
-
-        /* Responsive container to stop "giant" scaling on wide Edge windows */
-        .gallery-container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px 100px;
-        }
-      `}</style>
-
-{/* --- CALL BUTTON --- */}
+      {/* --- CALL BUTTON --- */}
       <a
         href="tel:+12345678900"
         style={{
@@ -87,10 +85,10 @@ function App() {
         <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
           <span style={{ fontSize: '0.9rem', textTransform: 'uppercase' }}>
             Call{' '}
-            <span style={{ 
-              color: '#39FF14', 
-              fontWeight: 'bold', 
-              textShadow: '0 0 8px #39FF14, 0 0 15px #39FF14, 0 0 20px #39FF14' 
+            <span style={{
+              color: '#39FF14',
+              fontWeight: 'bold',
+              textShadow: '0 0 8px #39FF14, 0 0 15px #39FF14, 0 0 20px #39FF14'
             }}>
               GLO
             </span>
@@ -99,12 +97,12 @@ function App() {
         </div>
       </a>
 
-      {/* HEADER*/}
+      {/* HEADER */}
       <div style={{ textAlign: 'center', padding: '120px 20px 40px' }}>
-        <h1 style={{ 
-          fontWeight: 'bold', 
-          fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
-          margin: '0 auto' 
+        <h1 style={{
+          fontWeight: 'bold',
+          fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+          margin: '0 auto'
         }}>
           Digital Media Art Gallery
         </h1>
@@ -163,32 +161,33 @@ function App() {
                 }}
               >
                 {item.url.endsWith('.mp4') ? (
-                  <video 
-                    autoPlay muted loop playsInline 
+                  <video
+                    autoPlay muted loop playsInline
                     aria-label={`Art Video: ${item.title}`}
                     style={{ width: '100%', height: '250px', objectFit: 'cover' }}
                   >
                     <source src={item.url} type="video/mp4" />
+                    <track kind="captions" src="/captions.vtt" srclang="en" label="English" default />
                   </video>
                 ) : (
-                  <img 
-                    src={item.url} 
-                    alt={`Art Image: ${item.title} by ${item.artist}`} 
-                    style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
+                  <img
+                    src={item.url}
+                    alt={`Art Image: ${item.title} by ${item.artist}`}
+                    style={{ width: '100%', height: '250px', objectFit: 'cover' }}
                   />
                 )}
 
                 <div style={{ padding: '25px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                   <h2 style={{ color: '#39FF14', fontSize: '1.8rem' }}>{item.title}</h2>
-                <p style={{ fontSize: '1.1rem', color: '#ccc' }}>
-  Artist: <span style={{ 
-    color: '#ffffff', 
-    fontWeight: 'bold',
-    textShadow: '0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff' 
-  }}>
-    {item.artist}
-  </span>
-</p>
+                  <p style={{ fontSize: '1.1rem', color: '#ffffff' }}>
+                    Artist: <span style={{
+                      color: '#ffffff',
+                      fontWeight: 'bold',
+                      textShadow: '0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff'
+                    }}>
+                      {item.artist}
+                    </span>
+                  </p>
                   <button
                     onClick={() => setActiveItem(item)}
                     aria-label={`View details for ${item.title}`}
@@ -220,22 +219,34 @@ function App() {
         >
           <div
             onClick={e => e.stopPropagation()}
-            style={{ 
-              background: '#111', 
-              padding: 'clamp(20px, 5vw, 60px)', 
-              borderRadius: '15px', 
-              maxWidth: '900px', 
-              width: '95%', 
-              maxHeight: '90vh', 
-              overflowY: 'auto', 
-              textAlign: 'center', 
-              border: '2px solid #39FF14' 
+            style={{
+              background: '#111',
+              padding: 'clamp(20px, 5vw, 60px)',
+              borderRadius: '15px',
+              maxWidth: '900px',
+              width: '95%',
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              textAlign: 'center',
+              border: '2px solid #39FF14'
             }}
           >
             {activeItem.type === 'video' ? (
-              <video key={activeItem.url} src={activeItem.url} autoPlay muted loop playsInline aria-label={`Art Video: ${activeItem.title}`} style={{ maxWidth: '100%', maxHeight: '40vh', borderRadius: '8px' }} />
+              <video
+                key={activeItem.url}
+                autoPlay muted loop playsInline
+                aria-label={`Art Video: ${activeItem.title}`}
+                style={{ maxWidth: '100%', maxHeight: '40vh', borderRadius: '8px' }}
+              >
+                <source src={activeItem.url} type="video/mp4" />
+                <track kind="captions" src="/captions.vtt" srclang="en" label="English" default />
+              </video>
             ) : (
-              <img src={activeItem.url} alt={`Art Image: ${activeItem.title}`} style={{ maxWidth: '100%', maxHeight: '40vh', borderRadius: '8px' }} />
+              <img
+                src={activeItem.url}
+                alt={`Art Image: ${activeItem.title}`}
+                style={{ maxWidth: '100%', maxHeight: '40vh', borderRadius: '8px' }}
+              />
             )}
 
             <h2 style={{ color: '#39FF14', fontSize: 'clamp(1.8rem, 5vw, 3rem)', marginTop: '20px', textShadow: '0 0 10px #39FF14' }}>
@@ -258,7 +269,10 @@ function App() {
               </form>
             </div>
 
-            <button onClick={() => setActiveItem(null)} style={{ background: 'transparent', color: '#39FF14', border: '1px solid #39FF14', marginTop: '30px', padding: '10px 30px', borderRadius: '50px', cursor: 'pointer', fontSize: '1.1rem' }}>
+            <button
+              onClick={() => setActiveItem(null)}
+              style={{ background: 'transparent', color: '#39FF14', border: '1px solid #39FF14', marginTop: '30px', padding: '10px 30px', borderRadius: '50px', cursor: 'pointer', fontSize: '1.1rem' }}
+            >
               Close Gallery
             </button>
           </div>
