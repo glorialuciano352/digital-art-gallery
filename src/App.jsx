@@ -181,7 +181,7 @@ function App() {
                   <h2 style={{ color: '#39FF14', fontSize: '1.8rem' }}>{item.title}</h2>
                   <p style={{ fontSize: '1.1rem', color: '#ffffff' }}>
                     Artist: <span style={{
-                      color: '#ffffff',
+                      color: '#39FF14',
                       fontWeight: 'bold',
                       textShadow: '0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #ffffff'
                     }}>
