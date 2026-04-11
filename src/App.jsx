@@ -164,7 +164,7 @@ function App() {
                   <video
                     autoPlay muted loop playsInline
                     aria-label={`Art Video: ${item.title}`}
-                    style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '250px', objectFit: 'contain' }}
                   >
                     <source src={item.url} type="video/mp4" />
                     <track kind="captions" src="/captions.vtt" srclang="en" label="English" default />
@@ -173,7 +173,7 @@ function App() {
                   <img
                     src={item.url}
                     alt={`Art Image: ${item.title} by ${item.artist}`}
-                    style={{ width: '100%', height: '250px', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '250px', objectFit: 'contain' }}
                   />
                 )}
 
