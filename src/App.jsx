@@ -103,20 +103,26 @@ function App() {
 
       {/* --- CALL BUTTON --- */}
       <a
-        href="tel:+12345678900"
-        style={{
-          position: 'fixed', top: '20px', right: '20px', zIndex: 9999,
-          backgroundColor: '#111', border: '2px solid #39FF14', borderRadius: '50px',
-          padding: '0 25px', height: '60px', display: 'flex', justifyContent: 'center',
-          alignItems: 'center', gap: '10px', color: '#39FF14', boxShadow: '0px 0px 15px #39FF14',
-          textDecoration: 'none'
-        }}
-      >
-        <span style={{ fontSize: '1.5rem' }} aria-hidden="true">📞</span>
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
-          <span style={{ fontSize: '0.9rem', textTransform: 'uppercase' }}>Call <span style={{ color: '#39FF14', fontWeight: 'bold' }}>GLO</span></span>
-          <span style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>+1 (234) 567-8900</span>
-        </div>
+  href="tel:+12345678900"
+  style={{
+    position: 'fixed', top: '20px', right: '20px', zIndex: 9999,
+    backgroundColor: '#111', border: '2px solid #39FF14', borderRadius: '50px',
+    padding: '0 25px', height: '60px', display: 'flex', justifyContent: 'center',
+    alignItems: 'center', gap: '10px', color: '#39FF14', boxShadow: '0px 0px 15px #39FF14',
+    textDecoration: 'none'
+  }}
+>
+  <span style={{ fontSize: '1.5rem' }} aria-hidden="true">📞</span>
+  <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
+    <span style={{ fontSize: '0.9rem', textTransform: 'uppercase' }}>
+      Call <span style={{ 
+        color: '#39FF14', 
+        fontWeight: 'bold',
+        textShadow: '0 0 8px #39FF14, 0 0 15px #39FF14' 
+      }}>GLO</span>
+    </span>
+    <span style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>+1 (234) 567-8900</span>
+  </div>
       </a>
 {/* HEADER */}
 <header style={{ textAlign: 'center', padding: '120px 20px 40px' }}>
