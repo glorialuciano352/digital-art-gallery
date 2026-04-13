@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import artData from './data.json';
 import About from './About';
-import About from './Reflection';
+import Reflection from './Reflection';
 import aiBackground from './art5.PNG';
 
 function App() {
@@ -118,12 +118,61 @@ function App() {
           <span style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>+1 (234) 567-8900</span>
         </div>
       </a>
+{/* HEADER */}
+<header style={{ textAlign: 'center', padding: '120px 20px 40px' }}>
+  <h1 style={{ 
+    fontWeight: 'bold', 
+    fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
+    margin: '0 auto',
+    color: 'white' 
+  }}>
+    GLO | Digital Portfolio
+  </h1>
 
-      {/* HEADER */}
-      <div style={{ textAlign: 'center', padding: '120px 20px 40px' }}>
-        <h1 style={{ fontWeight: 'bold', fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', margin: '0 auto' }}>GLO | Digital Portfolio</h1>
-        <button onClick={() => setShowAbout(true)} style={{ marginTop: '20px', padding: '12px 35px', borderRadius: '60px', background: 'transparent', border: '2px solid #39FF14', color: '#39FF14', fontSize: 'clamp(1.2rem, 3vw, 2rem)', cursor: 'pointer' }}>About the Artist</button>
-      </div>
+  {/* Button Container */}
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    gap: '20px', 
+    flexWrap: 'wrap', 
+    marginTop: '30px' 
+  }}>
+    <button 
+      onClick={() => setShowAbout(true)} 
+      style={{ 
+        padding: '12px 35px', 
+        borderRadius: '60px', 
+        background: 'transparent', 
+        border: '2px solid #39FF14', 
+        color: '#39FF14', 
+        fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', 
+        cursor: 'pointer',
+        boxShadow: '0 0 10px rgba(57, 255, 20, 0.3)',
+        transition: '0.3s'
+      }}
+    >
+      About the Artist
+    </button>
+
+    <button 
+      onClick={() => setShowReflection(true)} 
+      style={{ 
+        padding: '12px 35px', 
+        borderRadius: '60px', 
+        background: 'transparent', 
+        border: '2px solid #39FF14', 
+        color: '#39FF14', 
+        fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', 
+        cursor: 'pointer',
+        boxShadow: '0 0 10px rgba(57, 255, 20, 0.3)',
+        transition: '0.3s'
+      }}
+    >
+      Reflection
+    </button>
+  </div>
+</header>
+
 
       {/* FILTERS */}
      <div className="filter-container">         {['all', 'image', 'video'].map(f => (           <button             key={f}             onClick={() => setFilter(f)}             style={{               padding: '10px 25px',               borderRadius: '40px',               border: '2px solid #39FF14',               background: filter === f ? '#39FF14' : 'transparent',               color: filter === f ? '#000' : '#39FF14',               fontSize: '1rem',               cursor: 'pointer'             }}           >             {f === 'all' ? 'All' : `${f}s`}           </button>         ))}       </div> 
