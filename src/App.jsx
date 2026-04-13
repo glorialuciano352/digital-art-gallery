@@ -6,6 +6,7 @@ import aiBackground from './art5.PNG';
 
 function App() {
   const [showAbout, setShowAbout] = useState(false);
+  const [showReflection, setShowReflection] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
   const [filter, setFilter] = useState('all');
   
@@ -67,6 +68,10 @@ function App() {
 
   if (showAbout) {
     return <About setShowAbout={setShowAbout} />;
+  }
+
+  if (showReflection) {
+    return <Reflection setShowReflection={setShowReflection} />;
   }
 
   const filtered = artData.filter(
