@@ -70,7 +70,7 @@ function App() {
     return <About setShowAbout={setShowAbout} />;
   }
 
-  if (showReflection) {
+ if (showReflection) {
     return <Reflection setShowReflection={setShowReflection} />;
   }
 
