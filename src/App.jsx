@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import artData from './data.json';
 import About from './About';
-import Reflection from './Reflection';
+import About from './Reflection';
 import aiBackground from './art5.PNG';
 
 function App() {
@@ -69,8 +69,8 @@ function App() {
   if (showAbout) {
     return <About setShowAbout={setShowAbout} />;
   }
-
- if (showReflection) {
+ 
+  if (showReflection) {
     return <Reflection setShowReflection={setShowReflection} />;
   }
 
