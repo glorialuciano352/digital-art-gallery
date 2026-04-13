@@ -133,6 +133,7 @@ function App() {
   <div style={{ 
     display: 'flex',
     flexDirection: 'column', 
+    alignItems: 'center',
     justifyContent: 'center', 
     gap: '20px', 
     flexWrap: 'wrap', 
