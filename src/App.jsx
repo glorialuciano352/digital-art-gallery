@@ -7,6 +7,36 @@ function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
   const [filter, setFilter] = useState('all');
+  const generateAISuggestion = async () => {
+    if (!activeItem) return;
+    setIsGenerating(true);
+    try {
+      const response = await fetch("https://huggingface.co", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": "Bearer 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" 
+        },
+        body: JSON.stringify({ 
+          inputs: `I am interested in the art piece "${activeItem.title}". Could you tell me more about it?` 
+        }),
+      });
+      
+      const data = await response.json();
+      
+    let text = data[0]?.generated_text || data?.generated_text;
+      
+      if (text) {
+        setAiMessage(text.trim());
+      } else {
+        setAiMessage(`I'm very interested in "${activeItem.title}"! Can you provide more details?`);
+      }
+    } catch (error) {
+      console.error("AI Error:", error);
+      setAiMessage(`I'd love to learn more about the pricing and availability of "${activeItem.title}".`);
+    }
+    setIsGenerating(false);
+  };
 
   const appStyle = {
     backgroundImage: `url(${aiBackground})`,
@@ -255,6 +285,8 @@ function App() {
             <p style={{ color: '#fff', fontSize: '1.2rem', fontStyle: 'italic', margin: '20px 0' }}>
               {activeItem.description}
             </p>
+
+            
 
             <div style={{ border: '1px solid #39FF14', borderRadius: '10px', padding: '20px', textAlign: 'left' }}>
               <h3 style={{ color: '#39FF14', fontSize: '1.5rem', textAlign: 'center' }}>Inquire with GLO</h3>
