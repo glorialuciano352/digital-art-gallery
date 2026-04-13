@@ -120,11 +120,7 @@ function App() {
       </div>
 
       {/* FILTERS */}
-      <div className="filter-container">
-        {['all', 'art', 'animation', 'design'].map(f => (
-          <button key={f} onClick={() => setFilter(f)} style={{ padding: '10px 25px', borderRadius: '40px', border: '2px solid #39FF14', background: filter === f ? '#39FF14' : 'transparent', color: filter === f ? '#000' : '#39FF14', fontSize: '1rem', cursor: 'pointer' }}>{f === 'all' ? 'All' : `${f}s`}</button>
-        ))}
-      </div>
+     <div className="filter-container">         {['all', 'image', 'video'].map(f => (           <button             key={f}             onClick={() => setFilter(f)}             style={{               padding: '10px 25px',               borderRadius: '40px',               border: '2px solid #39FF14',               background: filter === f ? '#39FF14' : 'transparent',               color: filter === f ? '#000' : '#39FF14',               fontSize: '1rem',               cursor: 'pointer'             }}           >             {f === 'all' ? 'All' : `${f}s`}           </button>         ))}       </div> 
 
       {/* --- GALLERY GRID --- */}
       <div className="gallery-container">
