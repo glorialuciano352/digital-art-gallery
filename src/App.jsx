@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import artData from './data.json';
 import About from './About';
-import About from './Reflection';
+import Reflection from './Reflection';
 import aiBackground from './art5.PNG';
 
 function App() {
@@ -133,7 +133,14 @@ function App() {
               ) : (
                 <img src={item.url} alt={`Art Image: ${item.title}`} style={{ width: '100%', height: '250px', objectFit: 'contain' }} />
               )}
-              <div style={{ padding: '25px', textAlign: 'center', flexGrow: 1 }}>
+             <div style={{ 
+  padding: '25px', 
+  textAlign: 'center', 
+  flexGrow: 1, 
+  display: 'flex',          
+  flexDirection: 'column',   
+  justifyContent: 'space-between' 
+}}>
                 <h2 style={{ color: '#39FF14', fontSize: '1.8rem' }}>{item.title}</h2>
                 <p>Artist: <span style={{ color: '#39FF14', fontWeight: 'bold' }}>{item.artist}</span></p>
                 <button onClick={() => { setActiveItem(item); setAiMessage(''); }} style={{ marginTop: 'auto', padding: '12px', background: 'transparent', color: '#39FF14', border: '1px solid #39FF14', fontSize: '1.1rem', cursor: 'pointer', borderRadius: '5px', width: '100%' }}>View Details</button>
