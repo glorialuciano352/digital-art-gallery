@@ -171,7 +171,7 @@ function App() {
                 {isGenerating ? "🤖 Generating..." : "✨ Auto-Suggest Message"}
               </button>
 
-              <form action="https://formspree.io" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <form action="https://formspree.io/f/xqegjqaj" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <input name="name" placeholder="Your Name" required style={formInputStyle} />
                 <input type="email" name="email" placeholder="Your Email" required style={formInputStyle} />
                 <textarea 
