@@ -131,7 +131,8 @@ function App() {
 
   {/* Button Container */}
   <div style={{ 
-    display: 'flex', 
+    display: 'flex',
+    flexDirection: 'column', 
     justifyContent: 'center', 
     gap: '20px', 
     flexWrap: 'wrap', 
