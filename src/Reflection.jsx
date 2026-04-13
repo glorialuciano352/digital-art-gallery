@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Reflection = ({ setShowAbout }) => {
+const Reflection = ({ setShowReflection }) => {
   return (
     <main style={{ backgroundColor: '#000', color: 'white', minHeight: '100vh', textAlign: 'center', padding: '60px 20px' }}>
       
@@ -13,7 +13,7 @@ const Reflection = ({ setShowAbout }) => {
         .back-btn:hover { box-shadow: 0 0 20px #39FF14; background: rgba(57, 255, 20, 0.1); }
       `}</style>
 
-      <button className="back-btn" onClick={() => setShowAbout(false)}>
+      <button className="back-btn" onClick={() => setShowReflection(false)}>
         ← Return to Gallery
       </button>
 
