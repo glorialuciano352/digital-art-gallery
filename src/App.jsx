@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import artData from './data.json';
 import About from './About';
+import About from './Reflection';
 import aiBackground from './art5.PNG';
 
 function App() {
@@ -115,7 +116,7 @@ function App() {
 
       {/* HEADER */}
       <div style={{ textAlign: 'center', padding: '120px 20px 40px' }}>
-        <h1 style={{ fontWeight: 'bold', fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', margin: '0 auto' }}>Digital Media Art Gallery</h1>
+        <h1 style={{ fontWeight: 'bold', fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', margin: '0 auto' }}>GLO | Digital Portfolio</h1>
         <button onClick={() => setShowAbout(true)} style={{ marginTop: '20px', padding: '12px 35px', borderRadius: '60px', background: 'transparent', border: '2px solid #39FF14', color: '#39FF14', fontSize: 'clamp(1.2rem, 3vw, 2rem)', cursor: 'pointer' }}>About the Artist</button>
       </div>
 
